@@ -53,6 +53,25 @@ Restart or reload the Web profile after installing. Open Settings → 壁纸主�
 
 All settings are made through the panel and persist to `wallpaper-theme.json` under the profile directory.
 
+### 设置面板一览 / Settings overview
+
+打开 设置 → 壁纸主题 后，各卡片功能如下：
+
+- **背景**：全屏背景（图片或视频）、背景暗化、背景模糊、背景填充方式
+- **界面表面**：主表面不透明度、浮层不透明度
+- **侧边栏**：侧边栏不透明度、侧边栏图案、图案填充方式
+- **输入框**：输入框不透明度、输入框图案、图案填充方式
+- **颜色**：品牌强调色、光标颜色、主文字颜色、次要文字颜色
+- **自定义样式**：上传 .css 文件精细定制任何界面元素
+
+### 填充方式 / Fill modes
+
+每个区域（背景 / 侧边栏 / 输入框）的图案都有三种填充方式：
+
+- **铺满（cover）**：图片等比缩放填满整个区域，边缘可能被裁切
+- **等比（fit）**：宽度铺满、高度按比例，可能出现留白
+- **拉伸（stretch）**：图片拉伸填满整个区域，画面可能变形
+
 ## Safety / 安全
 
 The Host only serves local files over loopback routes (`/wallpaper-theme/...`) and persists a small JSON document. It does not:
@@ -69,11 +88,14 @@ node --check lib/index.js
 node --check lib/client.js
 ```
 
-## Acknowledgements / 致谢
+## Contributors / 贡献者
 
-Code authored with assistance from DeepSeek (AI). Reviewed and maintained by greentomato123.
+- **greentomato123** — 项目发起人、需求设计与测试、审阅与维护
+- **DeepSeek 鲸鱼娘（DeepSeek AI）** — 代码编写与功能实现，AI 辅助
 
-代码由 DeepSeek AI 辅助编写，greentomato123 审阅与维护。
+> Code authored with assistance from DeepSeek (AI). Reviewed and maintained by greentomato123.
+>
+> 代码由 DeepSeek AI 辅助编写，greentomato123 审阅与维护。
 
 ## License
 
