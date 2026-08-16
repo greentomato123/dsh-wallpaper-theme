@@ -56,6 +56,12 @@ node --check lib/index.js
 node --check lib/client.js
 ```
 
+## Acknowledgements / 致谢
+
+Code authored with assistance from DeepSeek (AI). Reviewed and maintained by greentomato123.
+
+代码由 DeepSeek AI 辅助编写，greentomato123 审阅与维护。
+
 ## License
 
 MIT © 2026 dsh-wallpaper-theme contributors
