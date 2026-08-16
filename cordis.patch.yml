@@ -1,0 +1,12 @@
+# Custom wallpaper theme bundle layer for dsh-wallpaper-theme.
+# The host row serves the wallpaper image + config API over HTTP; the client
+# half applies the translucent token overrides, the fullscreen background CSS,
+# and renders the settings panel. User adjustments persist to the JSON
+# document under the profile directory (configPath).
+- insert:
+    - id: dsh-wallpaper-theme
+      name: dsh-wallpaper-theme
+      config:
+        imagePath: ''
+        routePrefix: /wallpaper-theme
+        configPath: !!js dshHomePath('profiles', 'web', 'wallpaper-theme.json')

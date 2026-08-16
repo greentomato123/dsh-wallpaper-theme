@@ -1,0 +1,40 @@
+{
+  "name": "dsh-wallpaper-theme",
+  "version": "0.1.0",
+  "description": "Custom fullscreen wallpaper theme for the web profile (冬映.png).",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "author": "dsh-wallpaper-theme",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh-plugin",
+    "theme",
+    "wallpaper"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  },
+  "dependencies": {
+    "schemastery": "3.18.0"
+  }
+}
